@@ -52,13 +52,6 @@ export default {
         this.$root.$refs.ContactList = this
         await this.fetch()
     },
-    computed: {
-        filteredList() {
-        return this.userData.filter(data => {
-            return data.first_name.toLowerCase().includes(this.search.toLowerCase())
-        })
-        }
-    },
     methods: {
         fetch (pageNum) {
             if (pageNum === 'undefined') {
